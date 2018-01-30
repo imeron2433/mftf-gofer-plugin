@@ -1,0 +1,47 @@
+<idea-plugin>
+  <id>com.magento.mftf.resolver</id>
+  <name>Magento MFTF Gofer</name>
+  <version>1.0</version>
+  <vendor email="imeron@magento.com" url="http://www.magento.com">Magento</vendor>
+
+  <description><![CDATA[
+      Plugin for Magento MFTF test development.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <dom.fileDescription implementation="com.magento.dom.description.EntityDomDescription"/>
+    <dom.fileDescription implementation="com.magento.dom.description.PageDomDescription"/>
+    <dom.fileDescription implementation="com.magento.dom.description.SectionDomDescription"/>
+    <dom.fileDescription implementation="com.magento.dom.description.TestDomDescription"/>
+    <completion.contributor language="XML" implementationClass="com.magento.completion.contributors.EntityXmlPipeCompletionContributor"/>
+    <completion.contributor language="XML" implementationClass="com.magento.completion.contributors.SectionXmlPipeCompletionContributor"/>
+    <completion.contributor language="XML" implementationClass="com.magento.completion.contributors.PageXmlPipeCompletionContributor"/>
+    <annotator language="XML" implementationClass="com.magento.annotations.EntityNameAnnotator"/>
+    <annotator language="XML" implementationClass="com.magento.annotations.SectionNameAnnotator"/>
+    <annotator language="XML" implementationClass="com.magento.annotations.PageNameAnnotator"/>
+    <annotator language="XML" implementationClass="com.magento.annotations.TestNameAnnotator"/>
+    <annotator language="XML" implementationClass="com.magento.annotations.StepKeyAnnotator"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
