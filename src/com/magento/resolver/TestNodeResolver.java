@@ -1,25 +1,30 @@
 package com.magento.resolver;
 
+import com.intellij.ide.highlighter.XmlFileType;
+import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.roots.ContentIterator;
-import com.intellij.openapi.roots.ProjectRootManager;
-import com.intellij.psi.PsiManager;
-import com.intellij.psi.xml.XmlFile;
-import com.intellij.psi.xml.XmlTag;
+import com.intellij.openapi.roots.ProjectFileIndex;
+import com.intellij.openapi.vfs.VirtualFile;
+import com.intellij.psi.search.FileTypeIndex;
+import com.intellij.psi.search.GlobalSearchScope;
+import com.intellij.util.indexing.FileBasedIndex;
 import com.intellij.util.xml.DomFileElement;
-import com.intellij.util.xml.DomManager;
 import com.magento.dom.description.TestDomDescription;
 import com.magento.dom.model.TestXmlRoot;
 import com.magento.dom.model.test.Test;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
-import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class TestNodeResolver
+public class TestNodeResolver extends BaseNodeResolver<TestXmlRoot>
 {
+    private static final Logger LOGGER = Logger.getInstance(TestNodeResolver.class);
+
     public List<String> getTestNames()
     {
         return getTestObjects().stream().map(test -> test.getName().toString()).collect(Collectors.toList());
@@ -30,25 +35,53 @@ public class TestNodeResolver
         List<Test> tests = new ArrayList<>();
         Project p = ProjectManager.getInstance().getOpenProjects()[0];
 
-        ContentIterator ci = (ContentIterator) virtualFile -> {
-            String ext = virtualFile.getExtension();
-            String dirname = virtualFile.getParent().getName();
-            if ("xml".equals(ext) && "Test".equals(dirname)) {
-                XmlFile myFile = (XmlFile) PsiManager.getInstance(p).findFile(virtualFile);
-                XmlTag rootTag = myFile.getDocument().getRootTag();
-                XmlTag[] xmlTags = rootTag.findSubTags("test");
+        LOGGER.debug("Iterating through project: " + p.getName());
 
-                if (xmlTags.length > 0 && Objects.equals(rootTag.getName(), TestDomDescription.ROOT_TAG)) {
-                    DomManager domJohn = DomManager.getDomManager(p);
-                    DomFileElement<TestXmlRoot> element = domJohn.getFileElement(myFile, TestXmlRoot.class);
-                    tests.addAll(element.getRootElement().getTests());
-                }
-            }
+        Collection<VirtualFile> virtualFiles = getXmlVirtualFiles(p);
 
-            return true;
-        };
+        for (VirtualFile virtualFile : virtualFiles) {
+            Optional<DomFileElement<TestXmlRoot>> optElement =
+                    Optional.ofNullable(
+                            retrieveRootElementFromDom(
+                                    virtualFile,
+                                    p,
+                                    "Test",
+                                    "test",
+                                    TestDomDescription.ROOT_TAG,
+                                    TestXmlRoot.class
+                            )
+                    );
 
-        ProjectRootManager.getInstance(p).getFileIndex().iterateContent(ci);
+            optElement.ifPresent(
+                    element -> tests.addAll(element.getRootElement().getTests())
+            );
+        }
+
+//        ProjectFileIndex pfi = ProjectFileIndex.SERVICE.getInstance(p);
+//
+//        pfi.iterateContent(new ContentIterator() {
+//            @Override
+//            public boolean processFile(VirtualFile virtualFile)
+//            {
+//                Optional<DomFileElement<TestXmlRoot>> optElement =
+//                        Optional.ofNullable(
+//                                retrieveRootElementFromDom(
+//                                        virtualFile,
+//                                        p,
+//                                        "Test",
+//                                        "test",
+//                                        TestDomDescription.ROOT_TAG,
+//                                        TestXmlRoot.class
+//                                )
+//                        );
+//
+//                optElement.ifPresent(
+//                        element -> tests.addAll(element.getRootElement().getTests())
+//                );
+//
+//                return false;
+//            }
+//        });
 
         return tests;
     }

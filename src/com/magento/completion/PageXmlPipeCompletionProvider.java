@@ -9,11 +9,13 @@ import org.jetbrains.annotations.NotNull;
 
 public class PageXmlPipeCompletionProvider extends BaseXMLPipeCompletionProvider
 {
-    private static PageNodeResolver PAGE_NODE_RESOLVER = new PageNodeResolver();
+    //private PageNodeResolver PAGE_NODE_RESOLVER = new PageNodeResolver();
 
     @Override
     protected void addCompletions(@NotNull CompletionParameters completionParameters, ProcessingContext processingContext, @NotNull CompletionResultSet completionResultSet)
     {
+        PageNodeResolver PAGE_NODE_RESOLVER = new PageNodeResolver();
+
         String attributeName = getAttributeName(completionParameters);
         if (!"url".equals(attributeName)) {
             return;

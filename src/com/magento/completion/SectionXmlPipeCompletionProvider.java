@@ -8,11 +8,13 @@ import org.jetbrains.annotations.NotNull;
 
 public class SectionXmlPipeCompletionProvider extends BaseXMLPipeCompletionProvider
 {
-    private static SectionNodeResolver SECTION_NODE_RESOLVER = new SectionNodeResolver();
+//    private SectionNodeResolver SECTION_NODE_RESOLVER = new SectionNodeResolver();
 
     @Override
     protected void addCompletions(@NotNull CompletionParameters completionParameters, ProcessingContext processingContext, @NotNull CompletionResultSet completionResultSet)
     {
+        SectionNodeResolver SECTION_NODE_RESOLVER = new SectionNodeResolver();
+
         String attributeName = getAttributeName(completionParameters);
         if (!"selector".equals(attributeName)) {
             return;

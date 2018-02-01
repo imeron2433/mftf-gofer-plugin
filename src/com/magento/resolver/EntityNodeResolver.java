@@ -1,14 +1,12 @@
 package com.magento.resolver;
 
+import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.roots.ContentIterator;
-import com.intellij.openapi.roots.ProjectRootManager;
-import com.intellij.psi.PsiManager;
-import com.intellij.psi.xml.XmlFile;
-import com.intellij.psi.xml.XmlTag;
+import com.intellij.openapi.roots.ProjectFileIndex;
+import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.util.xml.DomFileElement;
-import com.intellij.util.xml.DomManager;
 import com.magento.dom.description.EntityDomDescription;
 import com.magento.dom.model.EntityXmlRoot;
 import com.magento.dom.model.data.Entity;
@@ -17,8 +15,10 @@ import com.magento.dom.model.data.Data;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class EntityNodeResolver
+public class EntityNodeResolver extends BaseNodeResolver<EntityXmlRoot>
 {
+    private static final Logger LOGGER = Logger.getInstance(EntityNodeResolver.class);
+
     public List<String> getDistinctEntityNames()
     {
         return getAllEntities().stream().map(entity -> entity.getEntityName().toString()).distinct().collect(Collectors.toList());
@@ -49,27 +49,50 @@ public class EntityNodeResolver
         List<Entity> entities = new ArrayList<>();
         Project p = ProjectManager.getInstance().getOpenProjects()[0];
 
-        ContentIterator ci = virtualFile -> {
-            String ext = virtualFile.getExtension();
-            String dirname = virtualFile.getParent().getName();
+        LOGGER.debug("Iterating through project: " + p.getName());
 
-            if ("xml".equals(ext) && "Data".equals(dirname)) {
-                XmlFile myFile = (XmlFile) PsiManager.getInstance(p).findFile(virtualFile);
-                XmlTag rootTag = myFile.getDocument().getRootTag();
-                XmlTag[] xmlTags = rootTag.findSubTags("entity");
+        Collection<VirtualFile> virtualFiles = getXmlVirtualFiles(p);
 
-                if (xmlTags.length > 0 && Objects.equals(rootTag.getName(), EntityDomDescription.ROOT_TAG)) {
-                    DomManager domJohn = DomManager.getDomManager(p);
-                    DomFileElement<EntityXmlRoot> element = domJohn.getFileElement(myFile, EntityXmlRoot.class);
-                    entities.addAll(element.getRootElement().getEntities());
+        for (VirtualFile virtualFile : virtualFiles) {
+            DomFileElement<EntityXmlRoot> optElement =
+                    retrieveRootElementFromDom(
+                            virtualFile,
+                            p,
+                            "Data",
+                            "entity",
+                            EntityDomDescription.ROOT_TAG,
+                            EntityXmlRoot.class
+                    );
 
-                }
+            if (optElement != null && optElement.getRootElement().getEntities() != null) {
+                entities.addAll(optElement.getRootElement().getEntities());
             }
+        }
 
-            return true;
-        };
-
-        ProjectRootManager.getInstance(p).getFileIndex().iterateContent(ci);
+//        ProjectFileIndex pfi = ProjectFileIndex.SERVICE.getInstance(p);
+//        pfi.iterateContent(new ContentIterator() {
+//            @Override
+//            public boolean processFile(VirtualFile virtualFile)
+//            {
+//                Optional<DomFileElement<EntityXmlRoot>> optElement =
+//                        Optional.ofNullable(
+//                                retrieveRootElementFromDom(
+//                                        virtualFile,
+//                                        p,
+//                                        "Data",
+//                                        "entity",
+//                                        EntityDomDescription.ROOT_TAG,
+//                                        EntityXmlRoot.class
+//                                )
+//                        );
+//
+//                optElement.ifPresent(
+//                        element -> entities.addAll(element.getRootElement().getEntities())
+//                );
+//
+//                return false;
+//            }
+//        });
 
         return entities;
     }

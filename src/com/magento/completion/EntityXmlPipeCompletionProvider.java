@@ -8,11 +8,13 @@ import org.jetbrains.annotations.NotNull;
 
 public class EntityXmlPipeCompletionProvider extends BaseXMLPipeCompletionProvider
 {
-    private static EntityNodeResolver ENTITY_NODE_RESOLVER = new EntityNodeResolver();
+//    private EntityNodeResolver ENTITY_NODE_RESOLVER = new EntityNodeResolver();
 
     @Override
     protected void addCompletions(@NotNull CompletionParameters completionParameters, ProcessingContext processingContext, @NotNull CompletionResultSet completionResultSet)
     {
+        EntityNodeResolver ENTITY_NODE_RESOLVER = new EntityNodeResolver();
+
         String attributeName = getAttributeName(completionParameters);
         if (!"userInput".equals(attributeName)) {
             return;

@@ -38,6 +38,10 @@ public class StepKeyAnnotator implements Annotator
     private String returnStepKeyOrNull(PsiElement psiElement)
     {
         String attributeValue = null;
+        if (!psiElement.getClass().getSimpleName().equals("XmlTagImpl")) {
+            return attributeValue;
+        }
+
         XmlAttribute attribute = ((XmlTagImpl)psiElement).getAttribute("stepKey");
         if (attribute != null) {
             attributeValue = attribute.getValue();

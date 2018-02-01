@@ -1,14 +1,12 @@
 package com.magento.resolver;
 
+import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectManager;
 import com.intellij.openapi.roots.ContentIterator;
-import com.intellij.openapi.roots.ProjectRootManager;
-import com.intellij.psi.PsiManager;
-import com.intellij.psi.xml.XmlFile;
-import com.intellij.psi.xml.XmlTag;
+import com.intellij.openapi.roots.ProjectFileIndex;
+import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.util.xml.DomFileElement;
-import com.intellij.util.xml.DomManager;
 import com.magento.dom.description.SectionDomDescription;
 import com.magento.dom.model.SectionXmlRoot;
 import com.magento.dom.model.section.Element;
@@ -17,8 +15,10 @@ import com.magento.dom.model.section.Section;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class SectionNodeResolver
+public class SectionNodeResolver extends BaseNodeResolver<SectionXmlRoot>
 {
+    private static final Logger LOGGER = Logger.getInstance(SectionNodeResolver.class);
+
     public List<String> getSectionNames()
     {
         return getSectionObjects().stream().map(section -> section.getSectionName().toString()).collect(Collectors.toList());
@@ -33,25 +33,54 @@ public class SectionNodeResolver
     {
         List<Section> sections = new ArrayList<>();
         Project p = ProjectManager.getInstance().getOpenProjects()[0];
-        ContentIterator ci = (ContentIterator) virtualFile -> {
-            String ext = virtualFile.getExtension();
-            String dirname = virtualFile.getParent().getName();
-            if ("xml".equals(ext) && "Section".equals(dirname)) {
-                XmlFile myFile = (XmlFile) PsiManager.getInstance(p).findFile(virtualFile);
-                XmlTag rootTag = myFile.getDocument().getRootTag();
-                XmlTag[] xmlTags = rootTag.findSubTags("section");
 
-                if (xmlTags.length > 0 && Objects.equals(rootTag.getName(), SectionDomDescription.ROOT_TAG)) {
-                    DomManager domJohn = DomManager.getDomManager(p);
-                    DomFileElement<SectionXmlRoot> element = domJohn.getFileElement(myFile, SectionXmlRoot.class);
-                    sections.addAll(element.getRootElement().getSections());
-                }
-            }
+        LOGGER.debug("Iterating through project: " + p.getName());
 
-            return true;
-        };
+        Collection<VirtualFile> virtualFiles = getXmlVirtualFiles(p);
 
-        ProjectRootManager.getInstance(p).getFileIndex().iterateContent(ci);
+        for (VirtualFile virtualFile : virtualFiles) {
+            Optional<DomFileElement<SectionXmlRoot>> optElement =
+                    Optional.ofNullable(
+                            retrieveRootElementFromDom(
+                                    virtualFile,
+                                    p,
+                                    "Section",
+                                    "section",
+                                    SectionDomDescription.ROOT_TAG,
+                                    SectionXmlRoot.class
+                            )
+                    );
+
+            optElement.ifPresent(
+                    element -> sections.addAll(element.getRootElement().getSections())
+            );
+        }
+
+
+//        ProjectFileIndex pfi = ProjectFileIndex.SERVICE.getInstance(p);
+//        pfi.iterateContent(new ContentIterator() {
+//            @Override
+//            public boolean processFile(VirtualFile virtualFile)
+//            {
+//                Optional<DomFileElement<SectionXmlRoot>> optElement =
+//                        Optional.ofNullable(
+//                                retrieveRootElementFromDom(
+//                                        virtualFile,
+//                                        p,
+//                                        "Section",
+//                                        "section",
+//                                        SectionDomDescription.ROOT_TAG,
+//                                        SectionXmlRoot.class
+//                                )
+//                        );
+//
+//                optElement.ifPresent(
+//                        element -> sections.addAll(element.getRootElement().getSections())
+//                );
+//
+//                return false;
+//            }
+//        });
 
         return sections;
     }

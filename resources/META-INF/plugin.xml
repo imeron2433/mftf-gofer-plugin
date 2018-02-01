@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>com.magento.mftf.resolver</id>
+  <id>com.magento.mftf.gofer</id>
   <name>Magento MFTF Gofer</name>
   <version>1.0</version>
   <vendor email="imeron@magento.com" url="http://www.magento.com">Magento</vendor>
