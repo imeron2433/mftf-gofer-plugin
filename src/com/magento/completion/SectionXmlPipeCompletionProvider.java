@@ -13,7 +13,7 @@ public class SectionXmlPipeCompletionProvider extends BaseXMLPipeCompletionProvi
     @Override
     protected void addCompletions(@NotNull CompletionParameters completionParameters, ProcessingContext processingContext, @NotNull CompletionResultSet completionResultSet)
     {
-        SectionNodeResolver SECTION_NODE_RESOLVER = new SectionNodeResolver();
+        SectionNodeResolver SECTION_NODE_RESOLVER = SectionNodeResolver.getInstance();
 
         String attributeName = getAttributeName(completionParameters);
         if (!"selector".equals(attributeName)) {

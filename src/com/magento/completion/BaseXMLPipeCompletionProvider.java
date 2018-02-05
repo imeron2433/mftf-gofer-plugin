@@ -7,13 +7,13 @@ import com.intellij.codeInsight.lookup.LookupElementBuilder;
 
 import java.util.List;
 
-public abstract class BaseXMLPipeCompletionProvider extends CompletionProvider<CompletionParameters>
+abstract class BaseXMLPipeCompletionProvider extends CompletionProvider<CompletionParameters>
 {
 
     private static final String XML_ATTRIBUTE_VALUE_TOKEN = "XmlToken:XML_ATTRIBUTE_VALUE_TOKEN";
     private static final String DEFAULT_FIELD_TEXT = "IntellijIdeaRulezzz ";
 
-    protected String getAttributeValue(CompletionParameters completionParameters)
+    String getAttributeValue(CompletionParameters completionParameters)
     {
         if (completionParameters.getPosition().toString().equals(XML_ATTRIBUTE_VALUE_TOKEN)) {
             String textValue = completionParameters.getPosition().getParent().getParent().getText();
@@ -30,7 +30,7 @@ public abstract class BaseXMLPipeCompletionProvider extends CompletionProvider<C
         return null;
     }
 
-    protected String getAttributeName(CompletionParameters completionParameters)
+    String getAttributeName(CompletionParameters completionParameters)
     {
         if (completionParameters.getPosition().toString().equals(XML_ATTRIBUTE_VALUE_TOKEN)) {
             String textValue = completionParameters.getPosition().getParent().getParent().getText();
@@ -40,7 +40,7 @@ public abstract class BaseXMLPipeCompletionProvider extends CompletionProvider<C
         return null;
     }
 
-    protected void addListToCompletionResultSet(List<String> elements, CompletionResultSet completionResultSet)
+    void addListToCompletionResultSet(List<String> elements, CompletionResultSet completionResultSet)
     {
         for (String field : elements) {
             completionResultSet.addElement(LookupElementBuilder.create(field));

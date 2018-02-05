@@ -14,7 +14,7 @@ public class PageXmlPipeCompletionProvider extends BaseXMLPipeCompletionProvider
     @Override
     protected void addCompletions(@NotNull CompletionParameters completionParameters, ProcessingContext processingContext, @NotNull CompletionResultSet completionResultSet)
     {
-        PageNodeResolver PAGE_NODE_RESOLVER = new PageNodeResolver();
+        PageNodeResolver PAGE_NODE_RESOLVER = PageNodeResolver.getInstance();
 
         String attributeName = getAttributeName(completionParameters);
         if (!"url".equals(attributeName)) {

@@ -6,7 +6,7 @@ import com.intellij.psi.PsiReferenceBase;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class MagentoPsiReference extends PsiReferenceBase<PsiElement>
+class MagentoPsiReference extends PsiReferenceBase<PsiElement>
 {
 
     public MagentoPsiReference(PsiElement element, TextRange rangeInElement, boolean soft) {

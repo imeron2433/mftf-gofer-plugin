@@ -12,11 +12,11 @@ import java.util.Collections;
 
 public class SectionNameAnnotator implements Annotator
 {
-    private static SectionNodeResolver SECTION_NODE_RESOLVER = new SectionNodeResolver();
-
     @Override
     public void annotate(@NotNull PsiElement psiElement, @NotNull AnnotationHolder annotationHolder)
     {
+        SectionNodeResolver SECTION_NODE_RESOLVER = SectionNodeResolver.getInstance();
+
         if (psiElement.getContainingFile().getContainingDirectory().toString().endsWith("Section")
                 && psiElement.getText().equals("section")) {
             XmlAttribute attribute = ((XmlTagImpl)psiElement.getParent()).getAttribute("name");
@@ -27,7 +27,7 @@ public class SectionNameAnnotator implements Annotator
             String attributeValue = attribute.getValue();
 
             if (Collections.frequency(SECTION_NODE_RESOLVER.getSectionNames(), attributeValue) > 1) {
-                annotationHolder.createErrorAnnotation(psiElement.getParent(), "The Section 'name' attribute must be unique.");
+                annotationHolder.createWeakWarningAnnotation(psiElement.getParent(), "This Section 'name' attribute is being used elsewhere.");
             }
         }
     }

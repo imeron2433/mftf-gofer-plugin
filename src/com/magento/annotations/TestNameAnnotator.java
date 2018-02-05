@@ -3,6 +3,10 @@ package com.magento.annotations;
 import com.intellij.lang.annotation.AnnotationHolder;
 import com.intellij.lang.annotation.Annotator;
 import com.intellij.openapi.diagnostic.Logger;
+import com.intellij.openapi.fileEditor.FileEditorManager;
+import com.intellij.openapi.project.Project;
+import com.intellij.openapi.project.ProjectManager;
+import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.impl.source.xml.XmlTagImpl;
 import com.intellij.psi.xml.XmlAttribute;
@@ -13,30 +17,38 @@ import java.util.Collections;
 
 public class TestNameAnnotator implements Annotator
 {
-//    private TestNodeResolver TEST_NODE_RESOLVER = new TestNodeResolver();
     private static final Logger LOGGER = Logger.getInstance(TestNameAnnotator.class);
 
     @Override
-    public void annotate(@NotNull PsiElement psiElement, @NotNull AnnotationHolder annotationHolder) {
+    public void annotate(@NotNull PsiElement psiElement, @NotNull AnnotationHolder annotationHolder)
+    {
+        // get the open file compare with where element is
+        Project p = psiElement.getProject();
+        FileEditorManager manager = FileEditorManager.getInstance(p);
+        VirtualFile[] virtualFiles = manager.getSelectedFiles();
 
-        TestNodeResolver TEST_NODE_RESOLVER = new TestNodeResolver();
 
-        if (!psiElement.getParent().getClass().getSimpleName().equals("XmlTagImpl")) {
+        if (virtualFiles.length == 0 || !virtualFiles[0].getName().equals(psiElement.getContainingFile().getName())) {
             return;
         }
 
-        if (psiElement.getContainingFile().getContainingDirectory().toString().endsWith("Test") && psiElement.getText().equals("test")) {
+        if (!psiElement.getContainingFile().getContainingDirectory().toString().endsWith("Test") || !"XmlTagImpl".equals(psiElement.getParent().getClass().getSimpleName())) {
+            return;
+        }
+
+        if ("test".equals(psiElement.getText())) {
             XmlTagImpl parentTag= (XmlTagImpl)psiElement.getParent();
-            LOGGER.info("Element Type is: " + psiElement.getParent().getClass().getSimpleName());
             XmlAttribute attribute = parentTag.getAttribute("name");
             if (attribute == null) {
                 return;
             }
 
             String attributeValue = attribute.getValue();
+            TestNodeResolver TEST_NODE_RESOLVER = TestNodeResolver.getInstance();
 
             if (Collections.frequency(TEST_NODE_RESOLVER.getTestNames(), attributeValue) > 1) {
-                annotationHolder.createErrorAnnotation(attribute.getTextRange(), "The Test 'name' must be unique.");
+
+                annotationHolder.createWeakWarningAnnotation(attribute.getTextRange(), "The Test 'name' is in use elsewhere.");
             }
         }
     }

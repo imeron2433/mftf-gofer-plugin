@@ -1,10 +1,9 @@
 package com.magento.resolver;
 
+
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectManager;
-import com.intellij.openapi.roots.ContentIterator;
-import com.intellij.openapi.roots.ProjectFileIndex;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.util.xml.DomFileElement;
 import com.magento.dom.description.SectionDomDescription;
@@ -17,11 +16,27 @@ import java.util.stream.Collectors;
 
 public class SectionNodeResolver extends BaseNodeResolver<SectionXmlRoot>
 {
+    private static volatile SectionNodeResolver INSTANCE;
+    private final List<Section> SECTION_LIST = new ArrayList<>();
     private static final Logger LOGGER = Logger.getInstance(SectionNodeResolver.class);
+
+    private SectionNodeResolver() {
+
+    }
+
+    public synchronized static SectionNodeResolver getInstance()
+    {
+        if (INSTANCE == null) {
+            INSTANCE = new SectionNodeResolver();
+        }
+
+        return INSTANCE;
+    }
 
     public List<String> getSectionNames()
     {
-        return getSectionObjects().stream().map(section -> section.getSectionName().toString()).collect(Collectors.toList());
+        updateSectionObjects();
+        return SECTION_LIST.stream().filter(obj -> obj.getSectionName() != null).map(section -> section.getSectionName().toString()).collect(Collectors.toList());
     }
 
     public List<String> getDistinctSectionNames()
@@ -29,66 +44,28 @@ public class SectionNodeResolver extends BaseNodeResolver<SectionXmlRoot>
         return getSectionNames().stream().distinct().collect(Collectors.toList());
     }
 
-    private List<Section> getSectionObjects()
+    private void updateSectionObjects()
     {
-        List<Section> sections = new ArrayList<>();
+        SECTION_LIST.clear();
         Project p = ProjectManager.getInstance().getOpenProjects()[0];
 
         LOGGER.debug("Iterating through project: " + p.getName());
 
-        Collection<VirtualFile> virtualFiles = getXmlVirtualFiles(p);
+        Collection<VirtualFile> virtualFiles = getXmlVirtualFiles(p).stream().filter(Objects::nonNull).filter(file -> file.getParent().isDirectory() && "Section".equals(file.getParent().getName())).collect(Collectors.toList());
 
         for (VirtualFile virtualFile : virtualFiles) {
-            Optional<DomFileElement<SectionXmlRoot>> optElement =
-                    Optional.ofNullable(
-                            retrieveRootElementFromDom(
-                                    virtualFile,
-                                    p,
-                                    "Section",
-                                    "section",
-                                    SectionDomDescription.ROOT_TAG,
-                                    SectionXmlRoot.class
-                            )
-                    );
-
+            Optional<DomFileElement<SectionXmlRoot>> optElement = Optional.ofNullable(retrieveRootElementFromDom(virtualFile, p, "section", SectionDomDescription.ROOT_TAG, SectionXmlRoot.class));
             optElement.ifPresent(
-                    element -> sections.addAll(element.getRootElement().getSections())
+                    element -> SECTION_LIST.addAll(element.getRootElement().getSections())
             );
         }
-
-
-//        ProjectFileIndex pfi = ProjectFileIndex.SERVICE.getInstance(p);
-//        pfi.iterateContent(new ContentIterator() {
-//            @Override
-//            public boolean processFile(VirtualFile virtualFile)
-//            {
-//                Optional<DomFileElement<SectionXmlRoot>> optElement =
-//                        Optional.ofNullable(
-//                                retrieveRootElementFromDom(
-//                                        virtualFile,
-//                                        p,
-//                                        "Section",
-//                                        "section",
-//                                        SectionDomDescription.ROOT_TAG,
-//                                        SectionXmlRoot.class
-//                                )
-//                        );
-//
-//                optElement.ifPresent(
-//                        element -> sections.addAll(element.getRootElement().getSections())
-//                );
-//
-//                return false;
-//            }
-//        });
-
-        return sections;
     }
 
 
     public List<String> getSectionElementNames(String sectionName)
     {
-        Optional<Section> optionalSection = getSectionObjects().stream().filter(section ->
+        updateSectionObjects();
+        Optional<Section> optionalSection = SECTION_LIST.stream().filter(obj -> obj.getSectionName() != null).filter(section ->
                 sectionName.equals(section.getSectionName().toString())).findFirst();
 
         if (!optionalSection.isPresent()) {

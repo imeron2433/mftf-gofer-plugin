@@ -6,7 +6,7 @@ import com.intellij.psi.PsiReferenceRegistrar;
 import com.intellij.psi.xml.XmlAttribute;
 import org.jetbrains.annotations.NotNull;
 
-public class MagentoPsiReferenceContributor extends PsiReferenceContributor
+class MagentoPsiReferenceContributor extends PsiReferenceContributor
 {
 
     @Override

@@ -10,22 +10,21 @@ import org.jetbrains.annotations.NotNull;
 
 public class EntityNameAnnotator implements Annotator
 {
-    private static EntityNodeResolver ENTITY_NODE_RESOLVER = new EntityNodeResolver();
-
     @Override
     public void annotate(@NotNull PsiElement psiElement, @NotNull AnnotationHolder annotationHolder)
     {
-        if (psiElement.getContainingFile().getContainingDirectory().toString().endsWith("Data")
-                && psiElement.getText().equals("entity")) {
+
+        if (psiElement.getContainingFile().getContainingDirectory().toString().endsWith("Data") && "entity".equals(psiElement.getText())) {
             XmlAttribute attribute = ((XmlTagImpl)psiElement.getParent()).getAttribute("name");
             if (attribute == null) {
                 return;
             }
 
             String attributeValue = attribute.getValue();
+            EntityNodeResolver ENTITY_NODE_RESOLVER = EntityNodeResolver.getInstance();
 
             if (ENTITY_NODE_RESOLVER.entityNameIsDuplicate(attributeValue)) {
-                annotationHolder.createErrorAnnotation(psiElement.getParent(), "The Entity 'name' must be unique.");
+                annotationHolder.createWeakWarningAnnotation(psiElement.getParent(), "This Entity 'name' is in use elsewhere.");
             }
         }
     }

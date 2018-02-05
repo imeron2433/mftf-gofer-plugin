@@ -6,7 +6,7 @@ import com.intellij.psi.PsiReferenceProvider;
 import com.intellij.util.ProcessingContext;
 import org.jetbrains.annotations.NotNull;
 
-public class MagentoPsiReferenceProvider extends PsiReferenceProvider
+class MagentoPsiReferenceProvider extends PsiReferenceProvider
 {
     @NotNull
     @Override
