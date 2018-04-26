@@ -2,25 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08cc836d-1fc8-4ea2-bbe2-565f10b66d70" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/magento/template/MagentoTemplateLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/fileTemplates/xml/MFTF_ActionGroup.ft" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/fileTemplates/xml/MFTF_Page.ft" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/fileTemplates/xml/MFTF_Section.ft" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/fileTemplates/xml/MFTF_Test.ft" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/annotations/EntityNameAnnotator.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/annotations/EntityNameAnnotator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/annotations/PageNameAnnotator.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/annotations/PageNameAnnotator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/annotations/SectionNameAnnotator.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/annotations/SectionNameAnnotator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/annotations/StepKeyAnnotator.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/annotations/StepKeyAnnotator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/annotations/TestNameAnnotator.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/annotations/TestNameAnnotator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/completion/BaseXMLPipeCompletionProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/completion/BaseXMLPipeCompletionProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/completion/EntityXmlPipeCompletionProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/completion/EntityXmlPipeCompletionProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/completion/PageXmlPipeCompletionProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/completion/PageXmlPipeCompletionProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/completion/SectionXmlPipeCompletionProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/completion/SectionXmlPipeCompletionProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/completion/contributors/EntityXmlPipeCompletionContributor.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/completion/contributors/EntityXmlPipeCompletionContributor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/completion/contributors/PageXmlPipeCompletionContributor.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/completion/contributors/PageXmlPipeCompletionContributor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/completion/contributors/SectionXmlPipeCompletionContributor.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/completion/contributors/SectionXmlPipeCompletionContributor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/description/EntityDomDescription.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/description/EntityDomDescription.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/description/PageDomDescription.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/description/PageDomDescription.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/description/SectionDomDescription.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/description/SectionDomDescription.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/description/TestDomDescription.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/description/TestDomDescription.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/model/EntityXmlRoot.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/model/EntityXmlRoot.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/model/PageXmlRoot.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/model/PageXmlRoot.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/model/SectionXmlRoot.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/model/SectionXmlRoot.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/model/TestXmlRoot.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/model/TestXmlRoot.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/model/data/Data.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/model/data/Data.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/model/data/Entity.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/model/data/Entity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/model/page/Page.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/model/page/Page.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/model/section/Element.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/model/section/Element.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/model/section/Section.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/model/section/Section.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/dom/model/test/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/dom/model/test/Test.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReference.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/reference/MagentoPsiReference.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReferenceContributor.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/reference/MagentoPsiReferenceContributor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReferenceProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/reference/MagentoPsiReferenceProvider.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/resolver/BaseNodeResolver.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/resolver/BaseNodeResolver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/resolver/EntityNodeResolver.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/resolver/EntityNodeResolver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/resolver/PageNodeResolver.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/resolver/PageNodeResolver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/resolver/SectionNodeResolver.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/resolver/SectionNodeResolver.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/magento/resolver/TestNodeResolver.java" afterPath="$PROJECT_DIR$/src/main/java/com/magento/resolver/TestNodeResolver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mftf-gofer.iml" afterPath="$PROJECT_DIR$/mftf-gofer.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/annotations/EntityNameAnnotator.java" afterPath="$PROJECT_DIR$/src/com/magento/annotations/EntityNameAnnotator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/annotations/PageNameAnnotator.java" afterPath="$PROJECT_DIR$/src/com/magento/annotations/PageNameAnnotator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/annotations/SectionNameAnnotator.java" afterPath="$PROJECT_DIR$/src/com/magento/annotations/SectionNameAnnotator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/annotations/StepKeyAnnotator.java" afterPath="$PROJECT_DIR$/src/com/magento/annotations/StepKeyAnnotator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/annotations/TestNameAnnotator.java" afterPath="$PROJECT_DIR$/src/com/magento/annotations/TestNameAnnotator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/completion/BaseXMLPipeCompletionProvider.java" afterPath="$PROJECT_DIR$/src/com/magento/completion/BaseXMLPipeCompletionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/completion/EntityXmlPipeCompletionProvider.java" afterPath="$PROJECT_DIR$/src/com/magento/completion/EntityXmlPipeCompletionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/completion/PageXmlPipeCompletionProvider.java" afterPath="$PROJECT_DIR$/src/com/magento/completion/PageXmlPipeCompletionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/completion/SectionXmlPipeCompletionProvider.java" afterPath="$PROJECT_DIR$/src/com/magento/completion/SectionXmlPipeCompletionProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReference.java" afterPath="$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReference.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReferenceContributor.java" afterPath="$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReferenceContributor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReferenceProvider.java" afterPath="$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReferenceProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/resolver/BaseNodeResolver.java" afterPath="$PROJECT_DIR$/src/com/magento/resolver/BaseNodeResolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/resolver/EntityNodeResolver.java" afterPath="$PROJECT_DIR$/src/com/magento/resolver/EntityNodeResolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/resolver/PageNodeResolver.java" afterPath="$PROJECT_DIR$/src/com/magento/resolver/PageNodeResolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/resolver/SectionNodeResolver.java" afterPath="$PROJECT_DIR$/src/com/magento/resolver/SectionNodeResolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/magento/resolver/TestNodeResolver.java" afterPath="$PROJECT_DIR$/src/com/magento/resolver/TestNodeResolver.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EntityNodeResolver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/magento/resolver/EntityNodeResolver.java">
+      <file leaf-file-name="MagentoTemplateLoader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/template/MagentoTemplateLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+            <state relative-caret-position="630">
+              <caret line="42" column="115" lean-forward="true" selection-start-line="42" selection-start-column="115" selection-end-line="42" selection-end-column="115" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,98 +70,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SectionNodeResolver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/magento/resolver/SectionNodeResolver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SectionNameAnnotator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/magento/annotations/SectionNameAnnotator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="29" column="61" lean-forward="false" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageNameAnnotator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/magento/annotations/PageNameAnnotator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="28" column="61" lean-forward="false" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StepKeyAnnotator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/magento/annotations/StepKeyAnnotator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="32" column="103" lean-forward="false" selection-start-line="32" selection-start-column="103" selection-end-line="32" selection-end-column="103" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntityNameAnnotator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/magento/annotations/EntityNameAnnotator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="26" column="61" lean-forward="false" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestNameAnnotator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/magento/annotations/TestNameAnnotator.java">
+      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompletionProgressIndicator.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/codeInsight/completion/CompletionProgressIndicator.class">
+      <file leaf-file-name="EntityNameAnnotator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/annotations/EntityNameAnnotator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="99" column="27" lean-forward="false" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+            <state relative-caret-position="0">
+              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestNodeResolver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/magento/resolver/TestNodeResolver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="46" column="103" lean-forward="false" selection-start-line="46" selection-start-column="103" selection-end-line="46" selection-end-column="103" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageNodeResolver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/magento/resolver/PageNodeResolver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -149,6 +96,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="TestTemplate" />
         <option value="Class" />
       </list>
     </option>
@@ -167,9 +115,11 @@
       <find>element</find>
       <find>getSectionElementNames</find>
       <find>sectionName</find>
+      <find>main.java.com.magento</find>
     </findStrings>
     <replaceStrings>
       <replace>stepKey</replace>
+      <replace>com.magento</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -183,17 +133,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/magento/actions/XmlPipeAction.java" />
-        <option value="$PROJECT_DIR$/src/com/magento/dom/description/MagentoDomDescription.java" />
-        <option value="$PROJECT_DIR$/src/com/magento/dom/model/Field.java" />
-        <option value="$PROJECT_DIR$/src/com/magento/dom/model/Data.java" />
-        <option value="$PROJECT_DIR$/src/com/magento/dom/model/Entity.java" />
-        <option value="$PROJECT_DIR$/src/com/magento/resolver/NodeResolver.java" />
-        <option value="$PROJECT_DIR$/src/com/magento/dom/model/section/Page.java" />
-        <option value="$PROJECT_DIR$/src/com/magento/dom/model/section/Element.java" />
-        <option value="$PROJECT_DIR$/src/com/magento/dom/model/cest/Cest.java" />
-        <option value="$PROJECT_DIR$/src/com/magento/dom/model/cest/Test.java" />
-        <option value="$PROJECT_DIR$/src/com/magento/dom/model/cest/Action.java" />
         <option value="$PROJECT_DIR$/src/com/magento/resolver/CestNodeResolver.java" />
         <option value="$PROJECT_DIR$/src/com/magento/dom/model/MagentoXmlRoot.java" />
         <option value="$PROJECT_DIR$/src/com/magento/annotations/MagentoAnnotator.java" />
@@ -224,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/com/magento/completion/PageXmlPipeCompletionProvider.java" />
         <option value="$PROJECT_DIR$/src/com/magento/completion/SectionXmlPipeCompletionProvider.java" />
         <option value="$PROJECT_DIR$/src/com/magento/completion/EntityXmlPipeCompletionProvider.java" />
-        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
         <option value="$PROJECT_DIR$/src/com/magento/resolver/PageNodeResolver.java" />
         <option value="$PROJECT_DIR$/src/com/magento/resolver/TestNodeResolver.java" />
         <option value="$PROJECT_DIR$/src/com/magento/resolver/EntityNodeResolver.java" />
@@ -234,6 +172,18 @@
         <option value="$PROJECT_DIR$/src/com/magento/annotations/PageNameAnnotator.java" />
         <option value="$PROJECT_DIR$/src/com/magento/annotations/SectionNameAnnotator.java" />
         <option value="$PROJECT_DIR$/src/com/magento/annotations/TestNameAnnotator.java" />
+        <option value="$PROJECT_DIR$/src/com/magento/templates/TestFileModuleComponent.java" />
+        <option value="$PROJECT_DIR$/src/fileTemplates/internal/TestTempalte.xml" />
+        <option value="$PROJECT_DIR$/src/fileTemplates/xml/MFTF_Section.ft" />
+        <option value="$PROJECT_DIR$/src/fileTemplates/xml/MFTF_Page.ft" />
+        <option value="$PROJECT_DIR$/src/fileTemplates/xml/MFTF_ActionGroup.ft" />
+        <option value="$PROJECT_DIR$/src/main/magento/template/MagentoTemplateLoader.java" />
+        <option value="$PROJECT_DIR$/src/com/magento/template/MagentoTemplateLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/com/magento/template/MagentoTemplateLoader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magento/dom/description/EntityDomDescription.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magento/annotations/EntityNameAnnotator.java" />
+        <option value="$PROJECT_DIR$/resources/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/magento/template/MagentoTemplateLoader.java" />
       </list>
     </option>
   </component>
@@ -246,8 +196,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+    <option name="width" value="2516" />
+    <option name="height" value="1417" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -264,6 +214,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,30 +224,74 @@
               <item name="mftf-gofer-plugin" type="b2602c69:ProjectViewProjectNode" />
               <item name="mftf-gofer-plugin" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="mftf-gofer-plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mftf-gofer-plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mftf-gofer-plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mftf-gofer-plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mftf-gofer-plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mftf-gofer-plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mftf-gofer-plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mftf-gofer-plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mftf-gofer-plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mftf-gofer-plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mftf-gofer-plugin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mftf-gofer-plugin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="462c0819:PsiDirectoryNode" />
+              <item name="xml" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="SearchEverywhereHistoryKey" value="Anno&#9;FILE&#9;file:///Users/imeron/IdeaProjects/mftf-gofer-plugin/src/com/magento/annotations/TestNameAnnotator.java" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main.res.fileTemplates.xml" />
       <recent name="com.magento.dom.model.page" />
       <recent name="com.magento.dom.model" />
       <recent name="com.magento.dom.model.data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/fileTemplates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/res/fileTemplates/xml" />
+      <recent name="$PROJECT_DIR$/resources/fileTemplates/xml" />
+      <recent name="$PROJECT_DIR$/src/fileTemplates/xml" />
+      <recent name="$PROJECT_DIR$/src/fileTemplates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -428,27 +425,27 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2516" height="1417" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32794458" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53579676" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53579676" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948422" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17057396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13864188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948422" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46728253" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23941493" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -456,8 +453,10 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948422" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948422" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ft" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -484,187 +483,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="178" />
+      <option name="time" value="198" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="747" column="0" lean-forward="false" selection-start-line="747" selection-start-column="0" selection-end-line="747" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/dom/description/SectionDomDescription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/dom/description/TestDomDescription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/roots/ContentIterator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar!/sun/lwawt/macosx/CMouseDragGestureRecognizer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/dom/model/TestXmlRoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/dom/model/test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/roots/ProjectFileIndex.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="67" column="39" lean-forward="false" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/ResourceBundle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="2646" column="0" lean-forward="false" selection-start-line="2646" selection-start-column="0" selection-end-line="2646" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/util/xml/DomManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/psi/impl/source/xml/XmlTagImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="762" column="24" lean-forward="false" selection-start-line="762" selection-start-column="24" selection-end-line="762" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/completion/BaseXMLPipeCompletionProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="42" column="19" lean-forward="false" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/util/indexing/FileBasedIndex.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="69" column="51" lean-forward="false" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/psi/search/FileTypeIndex.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/dom/description/PageDomDescription.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/dom/model/PageXmlRoot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="11" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/dom/model/page/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/dom/model/section/Section.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="859">
-          <caret line="210" column="30" lean-forward="false" selection-start-line="210" selection-start-column="16" selection-end-line="210" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="234" column="18" lean-forward="false" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/dom/model/data/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReferenceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/reference/MagentoPsiReferenceContributor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/codeInsight/completion/CompletionService.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/openapi/application/impl/ApplicationImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -686,35 +509,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/resolver/BaseNodeResolver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/resolver/BaseNodeResolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/completion/contributors/PageXmlPipeCompletionContributor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/completion/contributors/PageXmlPipeCompletionContributor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/completion/contributors/EntityXmlPipeCompletionContributor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/completion/contributors/EntityXmlPipeCompletionContributor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/completion/SectionXmlPipeCompletionProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/completion/SectionXmlPipeCompletionProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="15" column="85" lean-forward="false" selection-start-line="15" selection-start-column="85" selection-end-line="15" selection-end-column="85" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/completion/EntityXmlPipeCompletionProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/completion/EntityXmlPipeCompletionProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
@@ -735,15 +558,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="35" column="96" lean-forward="false" selection-start-line="35" selection-start-column="96" selection-end-line="35" selection-end-column="96" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/completion/PageXmlPipeCompletionProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/completion/PageXmlPipeCompletionProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
@@ -771,33 +586,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/resolver/PageNodeResolver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/resolver/PageNodeResolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
           <caret line="51" column="73" lean-forward="false" selection-start-line="51" selection-start-column="73" selection-end-line="51" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/resolver/TestNodeResolver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/resolver/TestNodeResolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="46" column="103" lean-forward="false" selection-start-line="46" selection-start-column="103" selection-end-line="46" selection-end-column="103" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/resolver/EntityNodeResolver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/resolver/EntityNodeResolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
+        <state relative-caret-position="0">
           <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,29 +618,186 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="99" column="27" lean-forward="false" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/resolver/SectionNodeResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/annotations/StepKeyAnnotator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="32" column="103" lean-forward="false" selection-start-line="32" selection-start-column="103" selection-end-line="32" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/annotations/SectionNameAnnotator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="29" column="61" lean-forward="false" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/annotations/TestNameAnnotator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/magento/templates/TestFileModuleComponent.java" />
+    <entry file="file://$PROJECT_DIR$/src/fileTemplates/internal/blah.xml" />
+    <entry file="file://$PROJECT_DIR$/src/fileTemplates/internal/TestTempalte.xml" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/ide/fileTemplates/FileTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/ide/fileTemplates/impl/FileTemplateBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/ide/fileTemplates/impl/FTManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="221" column="0" lean-forward="false" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/ide/fileTemplates/impl/FileTemplatesLoader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/ide/fileTemplates/impl/FileTemplateSettings.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Deprecated.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="43" column="18" lean-forward="false" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/components/BaseComponent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/module/ModuleComponent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/reflect/Constructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/ide/fileTemplates/impl/BundledFileTemplate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="32" column="47" lean-forward="true" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar!/sun/reflect/NativeConstructorAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/ide/fileTemplates/FileTemplateManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="100" column="33" lean-forward="false" selection-start-line="100" selection-start-column="33" selection-end-line="100" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/ide/fileTemplates/impl/FileTemplateManagerImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="308" column="39" lean-forward="false" selection-start-line="308" selection-start-column="24" selection-end-line="308" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/ide/startup/impl/StartupManagerImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/fileTemplates/xml/MFTF_Section.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="11" lean-forward="false" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/fileTemplates/xml/MFTF_Page.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/fileTemplates/xml/MFTF_Test.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/magento/template/fileTemplates.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/resolver/SectionNodeResolver.java">
+    <entry file="file://$PROJECT_DIR$/resources/res/fileTemplates/xml/MFTF_ActionGroup.ft">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/dom/description/EntityDomDescription.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="43" lean-forward="true" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/annotations/StepKeyAnnotator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="32" column="103" lean-forward="false" selection-start-line="32" selection-start-column="103" selection-end-line="32" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/annotations/PageNameAnnotator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/annotations/PageNameAnnotator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="28" column="61" lean-forward="false" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
@@ -842,27 +805,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/annotations/SectionNameAnnotator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="29" column="61" lean-forward="false" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/annotations/TestNameAnnotator.java">
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="32" column="9" lean-forward="false" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/magento/annotations/EntityNameAnnotator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/annotations/EntityNameAnnotator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="61" lean-forward="false" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/fileTemplates/xml/MFTF_ActionGroup.ft">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="15" lean-forward="true" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/magento/template/MagentoTemplateLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="115" lean-forward="true" selection-start-line="42" selection-start-column="115" selection-end-line="42" selection-end-column="115" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -895,6 +868,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>groovy-2.4.14</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

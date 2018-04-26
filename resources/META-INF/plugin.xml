@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>com.magento.mftf.gofer</id>
+  <id>main.com.magento.mftf.gofer</id>
   <name>Magento MFTF Gofer</name>
   <version>1.0</version>
   <vendor email="imeron@magento.com" url="http://www.magento.com">Magento</vendor>
@@ -38,6 +38,7 @@
     <annotator language="XML" implementationClass="com.magento.annotations.PageNameAnnotator"/>
     <annotator language="XML" implementationClass="com.magento.annotations.TestNameAnnotator"/>
     <annotator language="XML" implementationClass="com.magento.annotations.StepKeyAnnotator"/>
+    <postStartupActivity implementation="com.magento.template.MagentoTemplateLoader"/>
   </extensions>
 
   <actions>
